@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Israt Jahan Ayesha — Player Profile</title>
+<meta name="description" content="Interactive game-styled portfolio of Israt Jahan Ayesha — ITM student, creative designer and AI/data builder at Daffodil International University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="confetti-layer" id="confetti" aria-hidden="true"></div>
+
+<!-- BOOT SCREEN -->
+<div class="boot" id="boot">
+  <div class="boot-grid" aria-hidden="true"></div>
+  <div class="boot-inner">
+    <p class="boot-eyebrow">Player profile — loading</p>
+    <h1 class="boot-title">ISRAT JAHAN<br>AYESHA</h1>
+    <div class="boot-bar" aria-hidden="true"><span class="boot-bar-fill" id="bootBarFill"></span></div>
+    <button class="boot-btn" id="bootStart" type="button">Press start</button>
+    <p class="boot-hint">or press any key to continue</p>
+  </div>
+</div>
+<noscript><style>#boot{display:none}</style></noscript>
+
+<!-- NAV -->
+<header class="hud-nav" id="hudNav">
+  <div class="hud-nav-inner">
+    <a class="hud-brand" href="#home">
+      <span class="hud-brand-mark" aria-hidden="true">IJA</span>
+      <span class="hud-brand-name">Israt Jahan Ayesha</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Toggle menu</span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#stats" class="nav-link">Stats</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#quests" class="nav-link">Quest log</a>
+      <a href="#levelmap" class="nav-link">Level map</a>
+      <a href="#badges" class="nav-link">Badges</a>
+      <a href="#contact" class="nav-link nav-link--cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- CHARACTER CARD / HERO -->
+  <section class="hero-card" id="home" aria-label="Player card">
+    <div class="hero-card-inner">
+
+      <div class="hero-avatar">
+        <svg viewBox="0 0 200 200" class="avatar-svg" aria-hidden="true">
+          <polygon points="100,6 186,52 186,148 100,194 14,148 14,52" class="avatar-hex-outer"/>
+          <polygon points="100,26 168,62 168,138 100,174 32,138 32,62" class="avatar-hex-inner"/>
+          <text x="100" y="114" text-anchor="middle" class="avatar-text">IJA</text>
+        </svg>
+        <span class="hero-level" aria-hidden="true">LV. 6</span>
+      </div>
+
+      <p class="hero-kicker">ITM Student · Daffodil International University</p>
+      <h1 class="hero-name">Israt Jahan Ayesha</h1>
+      <p class="hero-class">Creative Technologist <span class="hero-divider" aria-hidden="true"></span> Designer <span class="hero-divider" aria-hidden="true"></span> Builder</p>
+
+      <p class="hero-tagline">Currently on Semester 6 of a BSc in Information Technology &amp; Management — leveling up equally in Adobe Illustrator and Python, with a trophy case of national competitions to show the grind.</p>
+
+      <div class="hero-progress">
+        <div class="hero-progress-label">
+          <span>Semester 6 in progress</span>
+        </div>
+        <div class="hero-progress-track" role="img" aria-label="Semester 6 in progress">
+          <span class="hero-progress-fill" id="heroProgressFill"></span>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#achievements" class="btn btn--primary">View achievements</a>
+        <a href="#contact" class="btn btn--ghost">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS / INVENTORY -->
+  <section class="panel" id="stats" aria-label="Skills">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">01</span>
+        <div>
+          <h2 class="panel-title">Character stats</h2>
+          <p class="panel-lede">Filled bars are mastered tools. Outlined ones are still leveling up.</p>
+        </div>
+      </div>
+
+      <div class="stat-groups">
+
+        <div class="stat-group">
+          <h3 class="stat-group-title">Design arsenal</h3>
+          <ul class="stat-list" role="list">
+            <li class="stat" data-fill="92"><span class="stat-name">Adobe Illustrator</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="90"><span class="stat-name">Canva</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="45"><span class="stat-name">Adobe Photoshop</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--leveling">Leveling up</span></li>
+            <li class="stat" data-fill="45"><span class="stat-name">Freepik</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--leveling">Leveling up</span></li>
+          </ul>
+        </div>
+
+        <div class="stat-group">
+          <h3 class="stat-group-title">Programming &amp; data</h3>
+          <ul class="stat-list" role="list">
+            <li class="stat" data-fill="80"><span class="stat-name">Python &amp; Pandas</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="78"><span class="stat-name">SQL</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="75"><span class="stat-name">HTML &amp; CSS</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="72"><span class="stat-name">Power BI</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="40"><span class="stat-name">C</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--leveling">Leveling up</span></li>
+          </ul>
+        </div>
+
+        <div class="stat-group">
+          <h3 class="stat-group-title">Presentation &amp; party skills</h3>
+          <ul class="stat-list" role="list">
+            <li class="stat" data-fill="88"><span class="stat-name">PowerPoint</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="90"><span class="stat-name">Leadership</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="88"><span class="stat-name">Teamwork</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="85"><span class="stat-name">Communication</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+            <li class="stat" data-fill="84"><span class="stat-name">Emotional intelligence</span><span class="stat-track"><span class="stat-fill"></span></span><span class="stat-tag stat-tag--mastered">Mastered</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="panel panel--alt" id="achievements" aria-label="Achievements">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">02</span>
+        <div>
+          <h2 class="panel-title">Achievements unlocked</h2>
+          <p class="panel-lede">Tap a trophy — collect all ten and something extra happens.</p>
+        </div>
+      </div>
+
+      <ul class="ach-grid" role="list" id="achGrid">
+
+        <li class="ach ach--gold" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 16.7l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+          <p class="ach-title">Champion</p>
+          <p class="ach-sub">Infinity AI Buildfest 2026 — EdTech category, by CloudCamp</p>
+          <span class="ach-flag">National</span>
+        </li>
+
+        <li class="ach ach--gold" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 16.7l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>
+          <p class="ach-title">Winner</p>
+          <p class="ach-sub">Build with AI Hackdays @DIU</p>
+          <span class="ach-flag">Hackathon</span>
+        </li>
+
+        <li class="ach ach--silver" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5.2"/><path d="M8.3 12.4 5.5 21l6.5-3.4L18.5 21l-2.8-8.6"/></svg>
+          <p class="ach-title">2nd runner-up</p>
+          <p class="ach-sub">Technopreneurship 2026</p>
+          <span class="ach-flag">National</span>
+        </li>
+
+        <li class="ach ach--silver" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5.2"/><path d="M8.3 12.4 5.5 21l6.5-3.4L18.5 21l-2.8-8.6"/></svg>
+          <p class="ach-title">3rd position</p>
+          <p class="ach-sub">Website Development Project Showcase</p>
+          <span class="ach-flag">Departmental</span>
+        </li>
+
+        <li class="ach ach--silver" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5.2"/><path d="M8.3 12.4 5.5 21l6.5-3.4L18.5 21l-2.8-8.6"/></svg>
+          <p class="ach-title">4th position</p>
+          <p class="ach-sub">Art of Living exhibition, DIU</p>
+        </li>
+
+        <li class="ach ach--silver" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5.2"/><path d="M8.3 12.4 5.5 21l6.5-3.4L18.5 21l-2.8-8.6"/></svg>
+          <p class="ach-title">Bronze award</p>
+          <p class="ach-sub">The Duke of Edinburgh's International Award</p>
+        </li>
+
+        <li class="ach ach--silver" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5.2"/><path d="M8.3 12.4 5.5 21l6.5-3.4L18.5 21l-2.8-8.6"/></svg>
+          <p class="ach-title">Top 51 of 166 teams</p>
+          <p class="ach-sub">National Business Case Competition</p>
+        </li>
+
+        <li class="ach ach--bronze" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8h14M5 16h14"/></svg>
+          <p class="ach-title">Finalist</p>
+          <p class="ach-sub">AI Project Competition 2026, DIU</p>
+        </li>
+
+        <li class="ach ach--bronze" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8h14M5 16h14"/></svg>
+          <p class="ach-title">Quarter-finalist</p>
+          <p class="ach-sub">ICT Olympiad Bangladesh</p>
+        </li>
+
+        <li class="ach ach--bronze" tabindex="0" data-ach>
+          <svg class="ach-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8h14M5 16h14"/></svg>
+          <p class="ach-title">Program alumna</p>
+          <p class="ach-sub">Aspire Leaders Program, founded at Harvard</p>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUEST LOG -->
+  <section class="panel" id="quests" aria-label="Roles and involvement">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">03</span>
+        <div>
+          <h2 class="panel-title">Quest log</h2>
+          <p class="panel-lede">The recurring roles behind the trophy case.</p>
+        </div>
+      </div>
+
+      <ul class="quest-list" role="list">
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Joint Media &amp; Press Secretary</p>
+            <p class="quest-org">ITM Club</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Creative Designer</p>
+            <p class="quest-org">Data Science Club</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Team Leader</p>
+            <p class="quest-org">Hult Prize, DIU Chapter</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Volunteer</p>
+            <p class="quest-org">Byte Battle Competition — event execution &amp; coordination</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Participant</p>
+            <p class="quest-org">DIU Science Olympiad — representing ITM interdepartmentally</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+        <li class="quest">
+          <svg class="quest-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+          <div>
+            <p class="quest-title">Member</p>
+            <p class="quest-org">Study Abroad Club &amp; DIU Math Club</p>
+          </div>
+          <span class="quest-status">Complete</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LEVEL MAP -->
+  <section class="panel panel--alt" id="levelmap" aria-label="Education">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">04</span>
+        <div>
+          <h2 class="panel-title">Level map</h2>
+          <p class="panel-lede">Tap a checkpoint to bring up the details. BSc in Information Technology &amp; Management, Daffodil International University.</p>
+        </div>
+      </div>
+
+      <div class="level-path" id="levelPath">
+        <div class="level-path-line" aria-hidden="true"></div>
+
+        <button class="level-node" data-title="Secondary School Certificate (SSC)" data-school="Model Academy, Dhaka" data-score="GPA 5.00" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">SSC<br><b>5.00</b></span>
+        </button>
+
+        <button class="level-node" data-title="Higher Secondary Certificate (HSC)" data-school="Noubahini College, Dhaka" data-score="GPA 5.00" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">HSC<br><b>5.00</b></span>
+        </button>
+
+        <button class="level-node" data-title="BSc in ITM — Semester 1" data-school="Daffodil International University" data-score="CGPA 3.80" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S1<br><b>3.80</b></span>
+        </button>
+
+        <button class="level-node" data-title="BSc in ITM — Semester 2" data-school="Daffodil International University" data-score="CGPA 3.42" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S2<br><b>3.42</b></span>
+        </button>
+
+        <button class="level-node" data-title="BSc in ITM — Semester 3" data-school="Daffodil International University" data-score="CGPA 3.81" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S3<br><b>3.81</b></span>
+        </button>
+
+        <button class="level-node" data-title="BSc in ITM — Semester 4" data-school="Daffodil International University" data-score="CGPA 3.43" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S4<br><b>3.43</b></span>
+        </button>
+
+        <button class="level-node" data-title="BSc in ITM — Semester 5" data-school="Daffodil International University" data-score="CGPA 3.83" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S5<br><b>3.83</b></span>
+        </button>
+
+        <button class="level-node is-current" data-title="BSc in ITM — Semester 6 (current)" data-school="Daffodil International University" data-score="CGPA 3.83" type="button">
+          <span class="level-node-dot"></span>
+          <span class="level-node-label">S6<br><b>3.83</b></span>
+        </button>
+      </div>
+
+      <div class="level-detail" id="levelDetail">
+        <p class="level-detail-title" id="levelDetailTitle">BSc in ITM — Semester 6 (current)</p>
+        <p class="level-detail-school" id="levelDetailSchool">Daffodil International University</p>
+        <p class="level-detail-score" id="levelDetailScore">CGPA 3.83</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGES -->
+  <section class="panel" id="badges" aria-label="Certifications and projects">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">05</span>
+        <div>
+          <h2 class="panel-title">Badge case</h2>
+          <p class="panel-lede">Certifications and short programs, collected along the way.</p>
+        </div>
+      </div>
+
+      <ul class="badge-grid" role="list">
+        <li class="gbadge" tabindex="0">
+          <span class="gbadge-icon" aria-hidden="true"></span>
+          <p class="gbadge-title">Graphic Design Course</p>
+          <p class="gbadge-sub">E-Learning &amp; Earning Platform — social design, banners, branding</p>
+        </li>
+        <li class="gbadge" tabindex="0">
+          <span class="gbadge-icon" aria-hidden="true"></span>
+          <p class="gbadge-title">Python Workshop</p>
+          <p class="gbadge-sub">Hands-on training in Python basics and applications</p>
+        </li>
+        <li class="gbadge" tabindex="0">
+          <span class="gbadge-icon" aria-hidden="true"></span>
+          <p class="gbadge-title">AgentX Program</p>
+          <p class="gbadge-sub">Step 1 completed</p>
+        </li>
+        <li class="gbadge" tabindex="0">
+          <span class="gbadge-icon" aria-hidden="true"></span>
+          <p class="gbadge-title">Wadhwani Skilling</p>
+          <p class="gbadge-sub">Job Ready: Employability Skills</p>
+        </li>
+        <li class="gbadge" tabindex="0">
+          <span class="gbadge-icon" aria-hidden="true"></span>
+          <p class="gbadge-title">AI Engineering Masterclass</p>
+          <p class="gbadge-sub">Course completed</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT / SAVE -->
+  <section class="panel panel--alt" id="contact" aria-label="Contact">
+    <div class="panel-inner">
+      <div class="panel-head">
+        <span class="panel-index">06</span>
+        <div>
+          <h2 class="panel-title">Save file</h2>
+          <p class="panel-lede">Open to design work, data-flavoured projects, and the next competition.</p>
+        </div>
+      </div>
+
+      <div class="save-grid">
+        <button class="save-slot" type="button" data-copy="01986071092" data-label="Phone">
+          <span class="save-slot-label">Phone</span>
+          <span class="save-slot-value">01986071092</span>
+          <span class="save-slot-hint">Tap to copy</span>
+        </button>
+        <button class="save-slot" type="button" data-copy="ayesha242-51-004@diu.edu.bd" data-label="Email">
+          <span class="save-slot-label">Email</span>
+          <span class="save-slot-value">ayesha242-51-004@diu.edu.bd</span>
+          <span class="save-slot-hint">Tap to copy</span>
+        </button>
+        <div class="save-slot save-slot--static">
+          <span class="save-slot-label">Based near</span>
+          <span class="save-slot-value">Dhaka, Bangladesh</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="panel-inner footer-inner">
+    <p>Israt Jahan Ayesha — Department of ITM, Daffodil International University</p>
+    <p>&copy; <span id="year"></span></p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
